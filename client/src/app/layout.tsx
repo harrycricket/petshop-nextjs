@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Lusitana } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 const lusitana = Lusitana({
@@ -18,15 +19,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <body className={lusitana.className}>
-        <header>
-          <div>Main header</div>
-        </header>
-        {children}
-        <footer>Main footer</footer>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

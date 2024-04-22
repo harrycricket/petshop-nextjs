@@ -1,4 +1,4 @@
-# Shopping Page - Next.js
+# PET SHOP - Next.js
 
 This is a shopping web application built with Next.js. The application includes several features:
 
