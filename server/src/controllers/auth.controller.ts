@@ -37,7 +37,7 @@ export const registerController = async (body: RegisterBodyType) => {
   } catch (error: any) {
     if (isPrismaClientKnownRequestError(error)) {
       if (error.code === PrismaErrorCode.UniqueConstraintViolation) {
-        throw new EntityError([{ field: 'email', message: 'Email đã tồn tại' }])
+        throw new EntityError([{ field: 'email', message: 'Email already exists!' }])
       }
     }
     throw error
@@ -49,7 +49,7 @@ export const logoutController = async (sessionToken: string) => {
       token: sessionToken
     }
   })
-  return 'Đăng xuất thành công'
+  return 'Logged out successfully'
 }
 
 /**

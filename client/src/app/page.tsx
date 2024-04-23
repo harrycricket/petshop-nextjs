@@ -13,14 +13,14 @@ export default function Home() {
   return (
     <main className="flex gap-4 flex-col items-center justify-between p-12">
       {/* using Link Component*/}
-      <Button>
+      {/* <Button>
         <Link href={'/login'}>Login</Link>
-      </Button>
+      </Button> */}
 
       {/* using useRouter hook in next/navigation */}
-      <Button onClick={() => router.push('/register')}>
+      {/* <Button onClick={() => router.push('/register')}>
         Register
-      </Button>
+      </Button> */}
       
       {/* <div className="w-[200px] h-[130px] bg-red-400">
         <Image

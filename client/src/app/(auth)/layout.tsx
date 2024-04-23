@@ -1,4 +1,5 @@
-import { ModeToggle } from "@/components/mode-toggle";
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function AuthLayout({
   children,
@@ -7,10 +8,10 @@ export default function AuthLayout({
 }>) {
   return (
     <div>
-        <header>AuthLayout header</header>
-        <ModeToggle/>
-        {children}
-        <footer>AuthLayout footer</footer>
+      {/* <Button>
+        <Link href={'/'}>Home</Link>
+      </Button> */}
+      {children}
     </div>
   );
 }

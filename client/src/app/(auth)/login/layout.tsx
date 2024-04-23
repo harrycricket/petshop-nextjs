@@ -1,6 +1,3 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-
 export default function LoginLayout({
   children,
 }: Readonly<{
@@ -8,9 +5,6 @@ export default function LoginLayout({
 }>) {
   return (
     <div>
-      <Button>
-        <Link href={'/'}>Home</Link>
-      </Button>
       {children}
     </div>
   );
