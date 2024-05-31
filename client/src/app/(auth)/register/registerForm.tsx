@@ -135,9 +135,9 @@ export default function RegisterForm() {
         </form>
       </Form>
       <p className="text-orange-400">
-        Already has account?{' '}
+        Already have an account?{' '}
         <Link href={'login'} className="underline">
-          Sign In
+          Sign in
         </Link>
       </p>
     </div>
