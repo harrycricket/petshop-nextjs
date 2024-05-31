@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useRouter } from 'next/navigation';
 
@@ -21,7 +21,7 @@ export default function Home() {
       {/* <Button onClick={() => router.push('/register')}>
         Register
       </Button> */}
-      
+
       {/* <div className="w-[200px] h-[130px] bg-red-400">
         <Image
           src="/images/marine.jpg"

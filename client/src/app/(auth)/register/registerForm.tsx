@@ -13,10 +13,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import {
-  RegisterBody,
-  RegisterBodyType,
-} from '@/schemaValidations/auth.schema';
+import { RegisterBody, RegisterBodyType } from '@/schemaValidations/auth.schema';
 import envConfig from '@/config';
 import axios from 'axios';
 import Link from 'next/link';
@@ -47,7 +44,7 @@ export default function RegisterForm() {
         values,
         {
           headers: { 'Content-Type': 'application/json' },
-        }
+        },
       );
       console.log(response);
 
@@ -100,11 +97,7 @@ export default function RegisterForm() {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="Input your password"
-                    type="password"
-                    {...field}
-                  />
+                  <Input placeholder="Input your password" type="password" {...field} />
                 </FormControl>
                 <FormDescription>Ex: harry12#$vn</FormDescription>
                 <FormMessage />
@@ -118,11 +111,7 @@ export default function RegisterForm() {
               <FormItem>
                 <FormLabel>Confirm Password</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="Re-input your password"
-                    type="password"
-                    {...field}
-                  />
+                  <Input placeholder="Re-input your password" type="password" {...field} />
                 </FormControl>
                 <FormDescription>Ex: harry12#$vn</FormDescription>
                 <FormMessage />

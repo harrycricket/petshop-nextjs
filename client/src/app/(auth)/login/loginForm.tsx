@@ -16,7 +16,7 @@ import { Input } from '@/components/ui/input';
 import { LoginBody, LoginBodyType } from '@/schemaValidations/auth.schema';
 import envConfig from '@/config';
 import axios from 'axios';
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function LoginForm() {
   const form = useForm<LoginBodyType>({

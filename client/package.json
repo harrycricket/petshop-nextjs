@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky && husky install",
+    "prepare": "husky",
     "format": "lint-staged"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
     "sass": "^1.75.0",
+    "semantic-release": "^23.1.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.0"
@@ -42,9 +43,20 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
+  "husky": {
+    "scripts": {
+      "pre-commit": "npm run lint && npm run test && npm run build"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,css,scss,md,json,html}": "prettier --semi true --single-quote true --tab-width 2 --trailing-comma all --end-of-line lf --write",
     "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
-  }
+    "*.{js,css,md}": "prettier --write",
+    "*.lint-staged": "prettier --write"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
