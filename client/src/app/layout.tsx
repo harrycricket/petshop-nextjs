@@ -1,9 +1,7 @@
+import { ThemeProvider } from '@/components/common/theme-provider';
 import type { Metadata } from 'next';
 import { Inter, Lusitana } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from '@/components/common/theme-provider';
-import Header from '@/components/layout/Header';
-import { ModeToggle } from '@/components/common/mode-toggle';
 
 const inter = Inter({ subsets: ['latin'] });
 const lusitana = Lusitana({
@@ -30,7 +28,6 @@ export default function RootLayout({
                   enableSystem
                   disableTransitionOnChange
                 >
-        <Header />
           {children}
         </ThemeProvider>
       </body>

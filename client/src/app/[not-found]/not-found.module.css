@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.content {
+  text-align: center;
+}
+.title {
+  font-size: 72px;
+  animation: colorChange 2s infinite;
+}
+.subtitle {
+  font-size: 42px;
+  color: #333;
+  animation: colorChange 2s infinite;
+}
+.link {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+}
+.link:hover {
+  background-color: rgb(240, 240, 240);
+  color: #ff6347;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes colorChange {
+  0% { color: #ff6347; }
+  50% { color: #333; }
+  100% { color: #ff6347; }
+}
